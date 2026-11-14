@@ -1,5 +1,5 @@
 # 63° NORTH SWE CAMP
-
+![63° NORTH SWE CAMP Homepage Preview](images/website-preview.png)
 ### Off-Grid Overlanding & Outdoor Experiences in Northern Sweden
 
 ## About the Project
