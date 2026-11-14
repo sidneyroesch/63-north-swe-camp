@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO -->
+        <title>63° NORTH SWE CAMP | Off-Grid Overlanding in Northern Sweden</title>
+        <meta name="description" content="63° NORTH SWE CAMP - your off-grid basecamp for exploring forests, lakes and hidden gems throughout Västernorrland, Sweden.">
+        <meta name="keywords" content="63° NORTH SWE CAMP, off-grid camping, overlanding, Northern Sweden, Västernorrland, outdoor adventure, nature exploration">
+        <meta name="author" content="Sidney Roesch | 63° NORTH SWE CAMP">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="#hero" class="logo">
+                        <span class="logo-number">63°</span>
+                        <span class="logo-text">NORTH<br>SWE CAMP</span>
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="#hero">Welcome</a></li>
+                        <li><a href="#discover">Adventure</a></li>
+                        <li><a href="#explorer">Explore</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#visit">Visit</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="language-btn" aria-label="Change language"> 🇬🇧 <span>EN</span> | 🇸🇪 <span>SV</span></button>
+                </nav> 
+            </div>           
+        </header>
+        <main>
+
+            <!--Startsidan
+            Jag ville att besökaren direkt skulle förstå vad sidan   
+            handlar om och få en känsla för naturen runt campet.-->
+            <section id="hero" class="hero">
+                <div class="hero-overlay">
+                    <div class="container">
+                        <div class="hero-content">
+                            <p class="hero-subtitle">Off-Grid Overlanding in Northern Sweden</p>
+                            <h1>
+                                <span class="hero-number">63°</span><br>NORTH<br>SWE CAMP</h1>
+                            <p class="hero-tagline">Your adventure begins where the road slows down.</p>
+                            <p class="hero-text">Discover hidden forest lakes, scenic hiking trails, breathtaking viewpoints and authentic off-grid experiences in the heart of Västernorrland.</p>
+                            <a href="#discover" class="btn-primary">Begin Your Adventure</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Discover
+            Här kan besökaren utforska området runt campet.
+            Den interaktiva kartan gör att användaren
+            själv kan klicka på olika platser.-->
+            <section class="discover" id="discover">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-subtitle">Discover Västernorrland</p>
+                        <h2>Adventure Starts Here</h2>
+                        <p class="section-text">From peaceful forest lakes and scenic mountain viewpoints to cosy cafés, local restaurants and one of Sweden's most unique cultural festivals, there is always something to discover within easy reach of camp.</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <div id="map"></div>
+                    </div>
+                    <div class="destination-panel">
+                        <img id="destination-image" src="images/paraberget.jpg" alt="Paraberget">
+                        <div class="destination-content">
+                            <h3 id="destination-title">Paraberget</h3>
+                            <p id="destination-description">One of the finest viewpoints in the Sollefteå area.</p>
+                            <ul class="destination-details">
+                                <li id="destination-distance">📍 24 km</li>
+                                <li id="destination-time">🚗 28 minutes</li>
+                                <li id="destination-difficulty">🥾 Moderate hike</li>
+                                <li id="destination-season">🌞 May–October</li>
+                            </ul>
+                            <a id="destination-link" href="#" class="btn-primary" target="_blank">Open in Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Explore
+            Den här delen visar några av mina favoritplatser.
+            Jag använder knappar och kort för att göra
+            informationen lättare att läsa.-->
+            <section class="explorer" id="explorer">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-subtitle">Explore</p>
+                        <h2>Explore The Region</h2>
+                        <p class="section-text">Every destination below can easily be visited from 63° NORTH SWE CAMP.<br>Select an activity to discover some of our favourite places.</p>
+                    </div>
+                    <div class="explorer-buttons">
+                        <button class="explorer-btn active">🥾 Hiking</button>
+                        <button class="explorer-btn">🌊 Lakes</button>
+                        <button class="explorer-btn">☕ Food</button>
+                        <button class="explorer-btn">🎵 Culture</button>
+                        <button class="explorer-btn">📸 Viewpoints</button>
+                        <button class="explorer-btn">🪨 History</button>
+                    </div>
+                    <div class="explorer-card">
+                        <h3>Paraberget</h3>
+                        <p>One of the area's most beautiful viewpoints. Enjoy panoramic views over forests and valleys, especially during sunrise and autumn.</p>
+                        <ul>
+                            <li>📍 Approximately 35 minutes from camp</li>
+                            <li>🥾 Easy to moderate hike</li>
+                            <li>🍂 Best visited: May – October</li>
+                        </ul>
+                        <a href="#discover" class="btn-primary">Explore on Map</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--Gallery
+            Här visar jag bilder från området.
+            Jag tycker att bilder berättar mer om platsen
+            än långa beskrivningar.-->
+            <section class="gallery" id="gallery">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-subtitle">Life Around Camp</p>
+                        <h2>Moments From The Forest</h2>
+                        <p class="section-text">Experience peaceful mornings, campfire evenings, forest walks and the quiet rhythm of off-grid life in the heart of Västernorrland.</p>
+                    </div>
+                    <div class="gallery-feature">
+                        <img src="images/gallery-feature.jpeg" alt="Forest at 63° NORTH SWE CAMP">
+                    </div>    
+                    <div class="gallery-cards">
+                        <article class="gallery-card">
+                            <img src="images/gallery-01.jpg" alt="Forest">
+                            <div class="gallery-info">
+                                <h3>Forest Walks</h3>
+                                <p>Step straight from camp into endless forests.</p>
+                            </div>
+                        </article>
+                        <article class="gallery-card">
+                            <img src="images/gallery-02.jpg" alt="Campfire">
+                            <div class="gallery-info">
+                                <h3>Campfire Evenings</h3>
+                                <p>Share stories beneath the Nordic sky.</p>
+                            </div>
+                        </article>
+                        <article class="gallery-card">
+                            <img src="images/gallery-03.jpg" alt="Barn">
+                            <div class="gallery-info">
+                                <h3>The Community Barn</h3>
+                                <p>Meet fellow travellers and relax together.</p>
+                            </div>
+                        </article>
+                        <article class="gallery-card">
+                            <img src="images/gallery-04.jpg" alt="Lake">
+                            <div class="gallery-info">
+                                <h3>Hidden Lakes</h3>
+                                <p>Quiet places only minutes from camp.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--Visit
+            Praktisk information inför ett besök.
+            Jag valde kort eftersom de gör informationen
+            lätt att hitta.-->
+            <section class="visit" id="visit">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-subtitle">Plan Your Visit</p>
+                        <h2>Everything You Need To Know</h2>
+                        <p class="section-text">63° NORTH SWE CAMP is designed for self-sufficient overlanders who enjoy simple, authentic outdoor living.<br>Bring everything you need, leave no trace, and enjoy nature exactly as you found it.</p>
+                    </div>
+                    <div class="visit-grid">
+                        <article class="visit-card">
+                            <div class="visit-icon">🏕️</div>
+                            <h3>Camping Pitches</h3>
+                            <p>Spacious grass pitches suitable for 4x4 vehicles, rooftop tents and camper setups.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🔥</div>
+                            <h3>Fire Pit</h3>
+                            <p>Gather around the communal fire pit and enjoy peaceful evenings beneath the northern sky.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🪵</div>
+                            <h3>Firewood</h3>
+                            <p>Firewood is available on site for cosy campfires.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🚻</div>
+                            <h3>Compost Toilet</h3>
+                            <p>A simple compost toilet is provided to keep the camp environmentally friendly.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🧖</div>
+                            <h3>Sauna Tent</h3>
+                            <p>Relax and warm up after a day of hiking and exploring.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🏡</div>
+                            <h3>Community Barn</h3>
+                            <p>Meet fellow travellers, play darts, cook, eat and spend time together whatever the weather.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">🐕</div>
+                            <h3>Dog Friendly</h3>
+                            <p>Well-behaved dogs are welcome. Please respect wildlife and other guests.</p>
+                        </article>
+                        <article class="visit-card">
+                            <div class="visit-icon">♻️</div>
+                            <h3>Leave No Trace</h3>
+                            <p>Please take all rubbish with you and help us preserve this beautiful place.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--Contact
+            Sista delen på sidan.
+            Här hittar besökaren kontaktuppgifter och
+            platsen där campet ligger.-->
+            <section class="contact" id="contact">
+                <div class="container">
+                    <div class="section-heading">
+                        <p class="section-subtitle">Contact</p>
+                        <h2>Ready For Your Adventure?</h2>
+                        <p class="section-text">Whether you're planning a weekend escape or a longer overlanding journey through Northern Sweden, we'd love to welcome you.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div>
+                            <h3>63° NORTH SWE CAMP</h3>
+                            <p>Nyland 217</p>
+                            <p>882 91 Långsele</p>
+                            <p>Sweden</p>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@63northcamp.se</p>
+                        </div>
+                        <div>
+                            <h3>Coordinates</h3>
+                            <p>63.2458° N</p>
+                            <p>17.3728° E</p>
+                        </div>
+                    </div>   
+                </div>
+            </section>
+
+        </main>
+    </body>
+</html>
